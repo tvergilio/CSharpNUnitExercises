@@ -25,7 +25,7 @@ Ensure you have the .NET SDK installed. You can download it from the [.NET downl
 
 1. **Clone the repository**:
    ```sh
-   git clone https://github.com/tvergilio/csharp-nunit-exercises.git
+   git clone https://github.com/tvergilio/CSharpNUnitExercises.git
    cd CSharpNUnitExercises
    ```
 
