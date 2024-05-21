@@ -35,12 +35,11 @@ Ensure you have the .NET SDK and JetBrains Rider installed. You can download the
 
 3. **Build the solution**:
    - In Rider, go to `Build` in the top menu and select `Build Solution`.
-   - You will get some warnings, but you can ignore them.
 
 4. **Run the tests**:
    - In the Solution Explorer, right-click on the `Tests` project.
    - Select `Run Unit Tests` from the context menu.
-   - Alternatively, you can run all tests by going to `Unit Tests` in the top menu and selecting `Run All Tests`.
+   - Alternatively, you can run all tests by going to `Tests` in the top menu and selecting `Run Unit Tests`.
 
 ### Test Results
 
