@@ -1,0 +1,102 @@
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Rider settings
+.idea/
+
+# Auto-generated files
+Generated\ Files/
+.vs/
+.vscode/
+.vscode/**/launch.json
+.vscode/**/tasks.json
+.vscode/**/settings.json
+.vscode/**/extensions.json
+.vscode/**/typings/
+
+# Rider files
+.idea/
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code directories
+.vscode/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# DotNetCore
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# StyleCop
+StyleCopReport.xml
+
+# NUGET
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/packages/*
+# except build/, which is used as an MSBuild target.
+!**/packages/build/
+# Uncomment if necessary however generally it will be regenerated when needed
+#**/packages/repositories.config
+
+# Microsoft Azure Build Output
+csx/
+*.build.csdef
+
+# Windows Azure
+## Ignore Azure Package Cache
+**/csx/Debug/
+**/csx/Release/
+*.cloudsonfig
+
+# Node.js
+node_modules/
+
+# JavaScript
+*.log
+
+# Yarn
+.yarn-integrity
+
+# Logs
+*.log
+logs/
+*.log.*
+*.log.[0-9]
+
+# Bin and object folders
+**/bin/
+**/obj/
