@@ -6,7 +6,7 @@ This project is designed to help developers, especially those transitioning from
 
 ## Project Structure
 
-- **BrokenCode.cs**: Contains intentionally broken methods. Developers need to fix these to pass the tests.
+- **BrokenCode.cs**: Contains intentionally broken methods. Fix these to pass the tests.
 - **Geometry.cs**: Contains methods related to geometrical calculations involving structs.
 - **MathOperations.cs**: Contains methods to perform various mathematical operations using C# libraries.
 - **Numbers.cs**: Contains methods to calculate mathematical values like VAT, hypotenuse length, and Fibonacci numbers.
@@ -19,7 +19,7 @@ This project is designed to help developers, especially those transitioning from
 
 ### Prerequisites
 
-Ensure you have the .NET SDK installed. You can download it from the [.NET download page](https://dotnet.microsoft.com/download).
+Ensure you have the .NET SDK and JetBrains Rider installed. You can download the .NET SDK from the [.NET download page](https://dotnet.microsoft.com/download) and Rider from the [JetBrains website](https://www.jetbrains.com/rider/).
 
 ### Instructions
 
@@ -29,19 +29,20 @@ Ensure you have the .NET SDK installed. You can download it from the [.NET downl
    cd CSharpNUnitExercises
    ```
 
-2. **Build the solution**:
-   ```sh
-   dotnet build
-   ```
+2. **Open the solution in Rider**:
+   - Open JetBrains Rider.
+   - Click on `Open` and select the `CSharpNUnitExercises` solution file (`CSharpNUnitExercises.sln`).
 
-3. **Run the tests**:
-   ```sh
-   dotnet test
-   ```
+3. **Build the solution**:
+   - In Rider, go to `Build` in the top menu and select `Build Solution`.
+   - You will get some warnings, but you can ignore them.
 
-## Notes
+4. **Run the tests**:
+   - In the Solution Explorer, right-click on the `Tests` project.
+   - Select `Run Unit Tests` from the context menu.
+   - Alternatively, you can run all tests by going to `Unit Tests` in the top menu and selecting `Run All Tests`.
 
-- Each test class is designed to guide you through the process of implementing the corresponding methods.
-- Focus on understanding the .NET features highlighted in each class.
-- Use the tests to verify your implementation and ensure correctness.
+### Test Results
+
+Most tests will fail initially, but this is intentional. The tests are designed to guide you through your implementation. As you implement the methods in the corresponding classes, more tests will pass. 
 
