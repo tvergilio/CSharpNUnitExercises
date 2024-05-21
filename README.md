@@ -45,3 +45,5 @@ Ensure you have the .NET SDK and JetBrains Rider installed. You can download the
 
 Most tests will fail initially, but this is intentional. The tests are designed to guide you through your implementation. As you implement the methods in the corresponding classes, more tests will pass. 
 
+### Suggested Approach
+Solve the exercises in your own branch. Once you have completed the implementation, ask for a peer review in the Slack channel.
