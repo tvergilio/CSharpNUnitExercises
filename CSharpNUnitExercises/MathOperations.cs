@@ -25,26 +25,16 @@ namespace CSharpNUnitExercises
             return Math.Pow(a, b);
         }
 
-        public Complex AddComplex(Complex a, Complex b)
-        {
-            return a + b;
-        }
-
-        public Complex MultiplyComplex(Complex a, Complex b)
-        {
-            return a * b;
-        }
-
-        public double[,] MultiplyMatrices(double[,] a, double[,] b)
-        {
-           var matrix1 = Matrix<double>.Build.DenseOfArray(a);
-           var matrix2 = Matrix<double>.Build.DenseOfArray(b);
-           return matrix1.Multiply(matrix2).ToArray();
-        }
-
         public int GenerateSecureRandomNumber(int minValue, int maxValue)
         {
             return new Random().Next(minValue, maxValue + 1);
+        }
+        
+        public double[,] MultiplyMatrices(double[,] matrix1, double[,] matrix2)
+        {
+            var m1 = Matrix<double>.Build.DenseOfArray(matrix1);
+            var m2 = Matrix<double>.Build.DenseOfArray(matrix2);
+            return m1.Multiply(m2).ToArray();
         }
     }
 }

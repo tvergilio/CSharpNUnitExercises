@@ -1,5 +1,4 @@
 using CSharpNUnitExercises;
-using System.Numerics;
 
 namespace Tests
 {
@@ -56,38 +55,7 @@ namespace Tests
                 Assert.That(mathOperations.Power(2, -2), Is.EqualTo(0.25));
             });
         }
-
-        // New Tests
-        [Test]
-        public void AddComplex_TwoComplexNumbers_ReturnsSum()
-        {
-            Complex a = new Complex(1, 2);
-            Complex b = new Complex(3, 4);
-            Complex expected = new Complex(4, 6);
-
-            Assert.That(mathOperations.AddComplex(a, b), Is.EqualTo(expected));
-        }
-
-        [Test]
-        public void MultiplyComplex_TwoComplexNumbers_ReturnsProduct()
-        {
-            Complex a = new Complex(1, 2);
-            Complex b = new Complex(3, 4);
-            Complex expected = new Complex(-5, 10);
-
-            Assert.That(mathOperations.MultiplyComplex(a, b), Is.EqualTo(expected));
-        }
-
-        [Test]
-        public void MultiplyMatrices_TwoMatrices_ReturnsProduct()
-        {
-            double[,] matrix1 = { { 1, 2 }, { 3, 4 } };
-            double[,] matrix2 = { { 5, 6 }, { 7, 8 } };
-            double[,] expected = { { 19, 22 }, { 43, 50 } };
-
-            Assert.That(mathOperations.MultiplyMatrices(matrix1, matrix2), Is.EqualTo(expected));
-        }
-
+        
         [Test]
         public void GenerateSecureRandomNumber_ReturnsNumberWithinRange()
         {
@@ -99,5 +67,16 @@ namespace Tests
             Assert.That(result, Is.GreaterThanOrEqualTo(minValue));
             Assert.That(result, Is.LessThanOrEqualTo(maxValue));
         }
+
+        [Test]
+        public void MultiplyMatrices_TwoMatrices_ReturnsProduct()
+        {
+            double[,] matrix1 = { { 1, 2 }, { 3, 4 } };
+            double[,] matrix2 = { { 5, 6 }, { 7, 8 } };
+            double[,] expected = { { 19, 22 }, { 43, 50 } };
+
+            Assert.That(mathOperations.MultiplyMatrices(matrix1, matrix2), Is.EqualTo(expected));
+        }
+       
     }
 }
