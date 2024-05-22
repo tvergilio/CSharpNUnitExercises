@@ -1,4 +1,6 @@
-﻿namespace CSharpNUnitExercises
+﻿using System.Numerics;
+
+namespace CSharpNUnitExercises
 {
     public class MathOperations
     {
@@ -12,22 +14,7 @@
             throw new NotImplementedException();
         }
 
-        public int Multiply(int a, int b)
-        {
-            throw new NotImplementedException();
-        }
-
-        public double Divide(int a, int b)
-        {
-            throw new NotImplementedException();
-        }
-
         public int Modulus(int a, int b)
-        {
-            throw new NotImplementedException();
-        }
-
-        public double SquareRoot(double a)
         {
             throw new NotImplementedException();
         }
@@ -37,22 +24,22 @@
             throw new NotImplementedException();
         }
 
-        public double Sin(double angle)
+        public Complex AddComplex(Complex a, Complex b)
         {
             throw new NotImplementedException();
         }
 
-        public double Cos(double angle)
+        public Complex MultiplyComplex(Complex a, Complex b)
         {
             throw new NotImplementedException();
         }
 
-        public double Log(double a)
+        public double[,] MultiplyMatrices(double[,] matrix1, double[,] matrix2)
         {
             throw new NotImplementedException();
         }
 
-        public double Exp(double a)
+        public int GenerateSecureRandomNumber(int minValue, int maxValue)
         {
             throw new NotImplementedException();
         }

@@ -1,4 +1,5 @@
 using CSharpNUnitExercises;
+using System.Numerics;
 
 namespace Tests
 {
@@ -35,28 +36,6 @@ namespace Tests
         }
 
         [Test]
-        public void Multiply_TwoNumbers_ReturnsProduct()
-        {
-            Assert.Multiple(() =>
-            {
-                Assert.That(mathOperations.Multiply(2, 3), Is.EqualTo(6));
-                Assert.That(mathOperations.Multiply(-1, -1), Is.EqualTo(1));
-                Assert.That(mathOperations.Multiply(0, 5), Is.EqualTo(0));
-            });
-        }
-
-        [Test]
-        public void Divide_TwoNumbers_ReturnsQuotient()
-        {
-            Assert.Multiple(() =>
-            {
-                Assert.That(mathOperations.Divide(6, 3), Is.EqualTo(2));
-                Assert.That(mathOperations.Divide(-6, -2), Is.EqualTo(3));
-                Assert.That(mathOperations.Divide(5, 2), Is.EqualTo(2.5));
-            });
-        }
-
-        [Test]
         public void Modulus_TwoNumbers_ReturnsRemainder()
         {
             Assert.Multiple(() =>
@@ -64,17 +43,6 @@ namespace Tests
                 Assert.That(mathOperations.Modulus(5, 3), Is.EqualTo(2));
                 Assert.That(mathOperations.Modulus(10, 5), Is.EqualTo(0));
                 Assert.That(mathOperations.Modulus(-7, 3), Is.EqualTo(-1));
-            });
-        }
-
-        [Test]
-        public void SquareRoot_Number_ReturnsSquareRoot()
-        {
-            Assert.Multiple(() =>
-            {
-                Assert.That(mathOperations.SquareRoot(9), Is.EqualTo(3));
-                Assert.That(mathOperations.SquareRoot(0), Is.EqualTo(0));
-                Assert.That(mathOperations.SquareRoot(16), Is.EqualTo(4));
             });
         }
 
@@ -89,48 +57,47 @@ namespace Tests
             });
         }
 
+        // New Tests
         [Test]
-        public void Sin_AngleInRadians_ReturnsSine()
+        public void AddComplex_TwoComplexNumbers_ReturnsSum()
         {
-            Assert.Multiple(() =>
-            {
-                Assert.That(mathOperations.Sin(0), Is.EqualTo(0));
-                Assert.That(mathOperations.Sin(Math.PI / 2), Is.EqualTo(1));
-                Assert.That(mathOperations.Sin(Math.PI), Is.EqualTo(0).Within(0.0001));
-            });
+            Complex a = new Complex(1, 2);
+            Complex b = new Complex(3, 4);
+            Complex expected = new Complex(4, 6);
+
+            Assert.That(mathOperations.AddComplex(a, b), Is.EqualTo(expected));
         }
 
         [Test]
-        public void Cos_AngleInRadians_ReturnsCosine()
+        public void MultiplyComplex_TwoComplexNumbers_ReturnsProduct()
         {
-            Assert.Multiple(() =>
-            {
-                Assert.That(mathOperations.Cos(0), Is.EqualTo(1));
-                Assert.That(mathOperations.Cos(Math.PI / 2), Is.EqualTo(0).Within(0.0001));
-                Assert.That(mathOperations.Cos(Math.PI), Is.EqualTo(-1));
-            });
+            Complex a = new Complex(1, 2);
+            Complex b = new Complex(3, 4);
+            Complex expected = new Complex(-5, 10);
+
+            Assert.That(mathOperations.MultiplyComplex(a, b), Is.EqualTo(expected));
         }
 
         [Test]
-        public void Log_Number_ReturnsLogarithm()
+        public void MultiplyMatrices_TwoMatrices_ReturnsProduct()
         {
-            Assert.Multiple(() =>
-            {
-                Assert.That(mathOperations.Log(1), Is.EqualTo(0));
-                Assert.That(mathOperations.Log(Math.E), Is.EqualTo(1).Within(0.0001));
-                Assert.That(mathOperations.Log(100), Is.EqualTo(4.605).Within(0.001));
-            });
+            double[,] matrix1 = { { 1, 2 }, { 3, 4 } };
+            double[,] matrix2 = { { 5, 6 }, { 7, 8 } };
+            double[,] expected = { { 19, 22 }, { 43, 50 } };
+
+            Assert.That(mathOperations.MultiplyMatrices(matrix1, matrix2), Is.EqualTo(expected));
         }
 
         [Test]
-        public void Exp_Number_ReturnsExponent()
+        public void GenerateSecureRandomNumber_ReturnsNumberWithinRange()
         {
-            Assert.Multiple(() =>
-            {
-                Assert.That(mathOperations.Exp(0), Is.EqualTo(1));
-                Assert.That(mathOperations.Exp(1), Is.EqualTo(Math.E).Within(0.0001));
-                Assert.That(mathOperations.Exp(2), Is.EqualTo(Math.E * Math.E).Within(0.0001));
-            });
+            int minValue = 1;
+            int maxValue = 100;
+
+            int result = mathOperations.GenerateSecureRandomNumber(minValue, maxValue);
+
+            Assert.That(result, Is.GreaterThanOrEqualTo(minValue));
+            Assert.That(result, Is.LessThanOrEqualTo(maxValue));
         }
     }
 }
