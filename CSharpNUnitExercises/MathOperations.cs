@@ -24,22 +24,12 @@ namespace CSharpNUnitExercises
             throw new NotImplementedException();
         }
 
-        public Complex AddComplex(Complex a, Complex b)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Complex MultiplyComplex(Complex a, Complex b)
-        {
-            throw new NotImplementedException();
-        }
-
-        public double[,] MultiplyMatrices(double[,] matrix1, double[,] matrix2)
-        {
-            throw new NotImplementedException();
-        }
-
         public int GenerateSecureRandomNumber(int minValue, int maxValue)
+        {
+            throw new NotImplementedException();
+        }
+        
+        public double[,] MultiplyMatrices(double[,] matrix1, double[,] matrix2)
         {
             throw new NotImplementedException();
         }
